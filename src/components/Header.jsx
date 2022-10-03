@@ -1,12 +1,12 @@
 import React from 'react';
 import styled from "styled-components";
-import logo from "../assets/logo.png";
-import { useNavigate } from "react-router-dom"
+import logo from "../assets/logonew.png";
+import { useNavigate } from "react-router-dom";
 
-export default function Header() {
+export default function Header(props) {
   const navigate = useNavigate();
-  return(
-    <Container className="flex a-centre j-between">
+  return (
+    <Container className="flex a-center j-between">
       <div className="logo">
         <img src={logo} alt="logo" />
       </div>
@@ -32,6 +32,4 @@ const Container = styled.div`
   border-radius: 0.2rem;
   font-weight: bolder;
   font-size: 1.05rem;
-  rgb(0,0,0,0.5);
-
  }`;

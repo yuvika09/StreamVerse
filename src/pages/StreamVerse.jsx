@@ -1,9 +1,18 @@
-import React from 'react'
+import React, { useState } from 'react';
+import Navbar from '../components/Navbar';
+import backgroundImage from '../assets/home.jpg';
+import movieLogo from '../assets/homeTitle.webp';
 
-function StreamVerse() {
+export default function StreamVerse() {
+  const [isScrolled, setIsScrolled] = useState(false);
+  window.onscroll = () => {
+    setIsScrolled(window.pageYOffset == 0 ? false : true);
+    return () => (window.onscroll = null);
+  };
+
   return (
-    <div>StreamVerse</div>
+    <div>
+      <Navbar isScrolled={isScrolled} />
+    </div>
   )
 }
-
-export default StreamVerse
