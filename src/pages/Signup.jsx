@@ -100,7 +100,7 @@ const Container = styled.div`
           color: black;
           border: none;
           padding: 0.5rem;
-          margin: 0.5rem;
+          ${'' /* margin: 0.5rem; */}
           font-size: 1.2rem;
           border: 1px solid black;
           &:focus {
